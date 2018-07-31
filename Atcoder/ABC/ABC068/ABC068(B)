@@ -1,0 +1,28 @@
+//2017.7.29
+//ABC068(B)
+//２のn乗が一番2で割れると気づいた。多少境界条件などでもたついた。
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cstdlib> //abs　絶対値
+
+using namespace std;
+
+int main() {
+	int n, ans;
+	cin >> n;
+
+	if (n == 1) { ans = 1; }
+	else if (n == 2) { ans = 2; }
+	else if (n < 4) { ans = 2; }
+	else if (n < 8) { ans = 4; }
+	else if (n < 16) { ans = 8; }
+	else if (n < 32) { ans = 16; }
+	else if (n < 64) { ans = 32; }
+	else { ans = 64; }
+
+	cout << ans<<endl;
+
+	return 0;
+}

@@ -1,0 +1,23 @@
+//2017.11.18
+//YES,NOを小文字で書いてWA
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+	string a,b,huk;
+	cin >> a;
+  cin >> b;
+
+  huk=a.at(2);
+  huk=huk+a.at(1);
+  huk=huk+a.at(0);
+
+  if(huk==b) cout << "YES" << endl;
+  else cout << "NO" << endl;
+
+	return 0;
+}

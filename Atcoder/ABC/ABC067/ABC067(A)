@@ -1,0 +1,23 @@
+//2016.7.15
+//ABC 067 (A)
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+	int a,b;
+	cin >> a >>b;
+	//vector <int> A(n);
+	if(a%3==0){cout << "Possible";}
+  else if(b%3==0){cout <<"Possible";}
+  else if((a+b)%3==0){cout <<"Possible";}
+  else cout << "Impossible";
+
+
+
+
+	return 0;
+}

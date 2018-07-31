@@ -1,0 +1,41 @@
+//2016.7.29
+//ABC068 (C)
+//解けなかった理由　TLEとなる。島１とi,島iとｎを結ぶ定期船があるかを探索すると気ずかなかった。
+//ダイクストラやハッシュマップを使う方法もあるらしい。
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cstdlib> //abs　絶対値
+
+using namespace std;
+
+int main() {
+	int n,k=0,x,m,y;
+	cin >> n >> m ;
+	vector <int> A(m);
+	vector <int> B(m);
+	vector <int> C(m);
+	for (int i = 0; i < m; i++) {
+		cin >> A[i] >> B[i];
+		if (A[i] == 1) { C[k] = i; k++; }
+	}
+
+	for (int i = 0; i < k; i++)
+	{
+		x = C[i];
+		y = B[x];
+
+		for (int j = 0;j < m ;j++) {
+			if(y==A[j]){
+				if(B[j]==n) { cout << "POSSIBLE"; return 0; }
+			}
+
+
+		}
+
+	}
+
+	cout << "IMPOSSIBLE"<<endl;
+
+	return 0;
+}

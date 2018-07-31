@@ -1,0 +1,19 @@
+//2017.27.29
+//ABC068(A)
+//出力の仕方を復習するべき
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cstdlib> //abs　絶対値
+
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n；
+
+	cout << "ABC" << n <<endl;　//ここの書き方で一回ミスった
+
+	return 0;
+}
